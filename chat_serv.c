@@ -110,6 +110,7 @@ void * handle_clnt(void * arg){
 	}
 	clnt_cnt--;
 	pthread_mutex_unlock(&mutx);
+    // STEP6-1. client close()
 	close(clnt_sock);
     // 리턴 void* - 스레드함수는 리눅스내 지정된 형식이 있어서 필요함
 	return NULL;
